@@ -8,14 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Collections;
-namespace Ejercicio_04
+
+namespace Aplicacion1
 {
     public partial class Form1 : Form
     {
+
+        ArrayList ListaPrimos = new ArrayList();
+        ArrayList ListaNoPrimos = new ArrayList();
+
         public Form1()
         {
             InitializeComponent();
+            MessageBox.Show("Aplicacion para introducir una lista que te va preguntando si quieres introducir mas numeros y posteriormente mostrar los numeros primos y los que no son primos");
         }
+
         private static string InputBox(string texto)
         {
             InputBoxDialog ib = new InputBoxDialog();
@@ -27,84 +34,93 @@ namespace Ejercicio_04
             return s;
         }
 
-        ArrayList list = new ArrayList();
-        ArrayList list2 = new ArrayList();
-        void leerarray(ArrayList lista)
-        {
-            DialogResult continuar = DialogResult.Yes;
 
-            while (continuar == DialogResult.Yes)
+        void LeerArray(ArrayList ListaParam)
+        {
+            DialogResult QuiereContinuar = DialogResult.Yes;
+
+            while (QuiereContinuar == DialogResult.Yes)
             {
-                lista.Add(int.Parse(InputBox("Introduzca el número ")));
-                continuar = MessageBox.Show("¿Quiere introducir otro numero?", "¿Continuar?", MessageBoxButtons.YesNo);
+                ListaParam.Add(int.Parse(InputBox("Introduzca el número ")));
+                QuiereContinuar = MessageBox.Show("¿Quiere introducir otro numero?", "¿Continuar?", MessageBoxButtons.YesNo);
             }
 
 
         }
 
-        string mostrar(ArrayList lista)
+        string MostrarArray(ArrayList ListaParam)
         {
             int i;
-            string texto;
-            texto = "Los elementos de la lista son: ";
-            for (i = 0; i < lista.Count; i++)
+            string TextoMostrar;
+            TextoMostrar = "";
+
+
+            for (i = 0; i < ListaParam.Count; i++)
             {
-                texto = texto + lista[i] + ", ";
+                TextoMostrar = TextoMostrar + ListaParam[i] + ", ";
             }
-            return texto;
+
+
+            return TextoMostrar;
         }
 
-        bool primos (int primo)
+        bool ComprobarPrimos (int NumeroPrimo)
         {
-            bool comp = true;
-            int num = 2;
-            while (num <= primo / 2 && comp)
+            bool EsPrimo = true;
+            int i = 2;
+
+
+            while (i <= NumeroPrimo / 2 && EsPrimo)
             {
-                if (primo % num == 0)
+                if (NumeroPrimo % i == 0)
                 {
-                    comp = false;
+                    EsPrimo = false;
                 }
                 else
                 {
-                    num++;
+                    i++;
                 }
             }
-            return comp;
+
+
+            return EsPrimo;
         }
-        void SEPARARprim(ArrayList Nprimos, ArrayList Lprimos)
+        void SepararPrimos(ArrayList NoPrimos, ArrayList PrimosLista)
         {
             int i = 0;
-            bool primo;
-            while (i < Nprimos.Count)
+            bool ComprobarPrimo;
+
+
+            while (i < NoPrimos.Count)
             {
-                primo = primos((int)Nprimos[i]);
-                if (!primo)
+                ComprobarPrimo = ComprobarPrimos((int)NoPrimos[i]);
+                if (!ComprobarPrimo)
                 {
                     i++;
                 }
                 else
                 {
-                    Lprimos.Add(Nprimos[i]);
-                    Nprimos.RemoveAt(i);
+                    PrimosLista.Add(NoPrimos[i]);
+                    NoPrimos.RemoveAt(i);
                 }
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            leerarray(list);
+            LeerArray(ListaPrimos);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string texto, texto2;
-            SEPARARprim(list, list2);
-            texto = mostrar(list);
-            texto2 = mostrar(list2);
+            string TextoPrimos, TextoNoPrimos;
+            SepararPrimos(ListaPrimos, ListaNoPrimos);
+            TextoPrimos = "Los numeros que son primos son: \n" + MostrarArray(ListaPrimos);
+            TextoNoPrimos = "Los numeros que no son primos son: \n" + MostrarArray(ListaNoPrimos);
 
 
-            MessageBox.Show(texto);
-            MessageBox.Show(texto2);
+            MessageBox.Show(TextoPrimos);
+            MessageBox.Show(TextoNoPrimos);
         }
     }
 }

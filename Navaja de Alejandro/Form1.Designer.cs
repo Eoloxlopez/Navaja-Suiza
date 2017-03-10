@@ -40,7 +40,7 @@
             this.Bapp1.Name = "Bapp1";
             this.Bapp1.Size = new System.Drawing.Size(220, 79);
             this.Bapp1.TabIndex = 0;
-            this.Bapp1.Text = "button1";
+            this.Bapp1.Text = "Aplicacion 1";
             this.Bapp1.UseVisualStyleBackColor = true;
             this.Bapp1.Click += new System.EventHandler(this.Bapp1_Click);
             // 
@@ -50,7 +50,7 @@
             this.Bapp2.Name = "Bapp2";
             this.Bapp2.Size = new System.Drawing.Size(217, 79);
             this.Bapp2.TabIndex = 1;
-            this.Bapp2.Text = "button2";
+            this.Bapp2.Text = "Aplicacion 2";
             this.Bapp2.UseVisualStyleBackColor = true;
             this.Bapp2.Click += new System.EventHandler(this.Bapp2_Click);
             // 
@@ -60,7 +60,7 @@
             this.Bapp4.Name = "Bapp4";
             this.Bapp4.Size = new System.Drawing.Size(217, 85);
             this.Bapp4.TabIndex = 2;
-            this.Bapp4.Text = "button3";
+            this.Bapp4.Text = "Aplicacion 4";
             this.Bapp4.UseVisualStyleBackColor = true;
             this.Bapp4.Click += new System.EventHandler(this.Bapp4_Click);
             // 
@@ -70,7 +70,7 @@
             this.Bapp3.Name = "Bapp3";
             this.Bapp3.Size = new System.Drawing.Size(220, 85);
             this.Bapp3.TabIndex = 2;
-            this.Bapp3.Text = "button3";
+            this.Bapp3.Text = "Aplicacion 3";
             this.Bapp3.UseVisualStyleBackColor = true;
             this.Bapp3.Click += new System.EventHandler(this.Bapp3_Click);
             // 
@@ -84,7 +84,7 @@
             this.Controls.Add(this.Bapp2);
             this.Controls.Add(this.Bapp1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Aplicacion 2";
             this.ResumeLayout(false);
 
         }

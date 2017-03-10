@@ -21,23 +21,26 @@ namespace Navaja_de_Alejandro
 
         private void Bapp1_Click(object sender, EventArgs e)
         {
-            Ejercicio_04.Form1 oFormulario = new Ejercicio_04.Form1();
-            oFormulario.ShowDialog();
+            Aplicacion1.Form1 NuevoFormulario = new Aplicacion1.Form1();
+            NuevoFormulario.ShowDialog();
         }
 
         private void Bapp2_Click(object sender, EventArgs e)
         {
-            
+            Aplicacion2.Form1 NuevoFormulario = new Aplicacion2.Form1();
+            NuevoFormulario.ShowDialog();
         }
 
         private void Bapp3_Click(object sender, EventArgs e)
         {
-
+            Aplicacion3.Form1 NuevoFormulario = new Aplicacion3.Form1();
+            NuevoFormulario.ShowDialog();
         }
 
         private void Bapp4_Click(object sender, EventArgs e)
         {
-
+            Aplicacion4.Form1 NuevoFormulario = new Aplicacion4.Form1();
+            NuevoFormulario.ShowDialog();
         }
     }
 }

@@ -8,14 +8,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Ejercicio_25
+namespace Aplicacion4
 {
     public partial class Form1 : Form
     {
+
+        const int Ktam = 5;
+        int[] Vector1 = new int[Ktam];
+
         public Form1()
         {
             InitializeComponent();
+            MessageBox.Show("Aplicacion para introducir un vector y posteriormente introducir un numero para comprobar si esta en el vector");
         }
+
         private static string InputBox(string texto)
         {
             InputBoxDialog ib = new InputBoxDialog();
@@ -26,167 +32,52 @@ namespace Ejercicio_25
             ib.Close();
             return s;
         }
-        const int Kfilas = 3;
-        const int Kcols = 4;
-        int[] vectorfil = new int[Kfilas];
-        int[] vectorcol = new int[Kcols];
-        int[,] matriz = new int[Kfilas, Kcols];
 
-        void leermatriz(int[,] matriz1)
+        void LeerVector(int[] VectorParam)
         {
-            for (int i = 0; i < matriz1.GetLength(0); i++)
+            for (int i = 0; i < VectorParam.Length; i++)
             {
-                for (int j = 0; j < matriz1.GetLength(1); j++)
+                VectorParam[i] = int.Parse(InputBox("Introduzca una temperatura en el espacio " + i));
+            }
+        }
+
+        bool EstaVector(int[] VectorParam, int EstaElNum)
+        {
+            bool ComprobarNum = false;
+
+
+            for (int i = 0; i < VectorParam.Length && !ComprobarNum; i++)
+            {
+                if (EstaElNum == VectorParam[i])
                 {
-                    matriz[i, j] = int.Parse(InputBox("Elemento[" + i + ", " + j + "]"));
+                    ComprobarNum = true;
                 }
             }
-        }
-        string Qmes(int n1)
-        {
-            string texto = "";
 
 
-            switch (n1)
-            {
-                case 1:
-                    texto = "Enero";
-                    break;
-
-                case 2:
-                    texto = "Febrero";
-                    break;
-                case 3:
-                    texto = "Marzo";
-                    break;
-                case 4:
-                    texto = "Abril";
-                    break;
-                case 5:
-                    texto = "Mayo";
-                    break;
-                case 6:
-                    texto = "Junio";
-                    break;
-                case 7:
-                    texto = "Julio";
-                    break;
-                case 8:
-                    texto = "Agosto";
-                    break;
-                case 9:
-                    texto = "Septiembre";
-                    break;
-                case 10:
-                    texto = "Octubre";
-                    break;
-                case 11:
-                    texto = "Noviembre";
-                    break;
-                case 12:
-                    texto = "Diciembre";
-                    break;
-            }
-
-            return texto;
-        }
-        string mesMventas(int[,] matriz1)
-        {
-
-            int col, fil, i, mayor;
-            string texto, mes;
-            texto = "";
-            mes = "";
-            col = 0;
-            i = 0;
-
-
-            for (fil = 0; fil < matriz1.GetLength(1); fil++)
-            {
-                mayor = 0;
-                for (col = 0; col < matriz1.GetLength(0); col++)
-                {
-                    if (matriz1[col, fil] > mayor)
-                    {
-                        mayor = matriz1[col, fil];
-                        i = fil;
-                    }
-                }
-
-                mes = Qmes(i);
-                texto = texto + "El mayor mes de ventas de la " + (fil + 1) + "º empresa es " + mes + " donde a ganado" + mayor + "\n";
-            }
-
-            return texto;
+            return ComprobarNum;
         }
 
-        string ventasTmes(int[,] matriz1)
-        {
-            string texto, mes;
-            int suma, col;
-            mes = "";
-            texto = "";
-            suma = 0;
-
-
-            for (int fil = 0; fil < matriz1.GetLength(1); fil++)
-            {
-
-
-                for (col = 0; col < matriz1.GetLength(0); col++)
-                {
-                    suma = suma + matriz1[col, fil];
-                }
-                mes = Qmes(col);
-                texto = texto + "Las ventas totales de " + mes + "son " + suma + "\n";
-                suma = 0;
-            }
-            return texto;
-        }
-
-        string ventasTempresa(int[,] matriz1)
-        {
-            string texto, mes;
-            texto = "";
-            int suma, fil, col;
-            suma = 0;
-            fil = 0;
-            col = 0;
-
-
-            for (col = 0; col < matriz1.GetLength(0); col++)
-            {
-                for (fil = 0; fil < matriz1.GetLength(1); fil++)
-                {
-                    suma = suma + matriz1[col, fil];
-                }
-                mes = Qmes(col);
-                texto = texto + "Las ventas totales de la " + (fil + 1) + "º empresa es " + suma + "\n";
-                suma = 0;
-            }
-            return texto;
-        }
         private void button1_Click(object sender, EventArgs e)
         {
-            leermatriz(matriz);
+            LeerVector(Vector1);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string texto = ventasTempresa(matriz);
-            MessageBox.Show(texto);
-        }
+            int NumIntroducido;            
+            bool NumeroEsta;
+            NumIntroducido = int.Parse(textBox1.Text);
+            NumeroEsta = EstaVector(Vector1, NumIntroducido);
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            string texto = ventasTmes(matriz);
-            MessageBox.Show(texto);
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            string texto = mesMventas(matriz);
-            MessageBox.Show(texto);
+            if (NumeroEsta)
+            {
+                MessageBox.Show("El numero introduzido estaba en el vector"); 
+            }
+            else
+            {
+                MessageBox.Show("El numero introduzido no estaba en el vector");
+            }
         }
     }
 }
