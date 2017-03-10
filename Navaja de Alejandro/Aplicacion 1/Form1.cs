@@ -11,22 +11,33 @@ using System.Collections;
 
 namespace Aplicacion1
 {
+    /// <summary>
+    /// Clase formulario
+    /// </summary>
     public partial class Form1 : Form
     {
 
         ArrayList ListaPrimos = new ArrayList();
         ArrayList ListaNoPrimos = new ArrayList();
-
+        /// <summary>
+        /// Constructor del formulario
+        /// </summary>
+        /// <remarks>Contiene un MessageBox que explica la funcionalidad del programa</remarks>
         public Form1()
         {
             InitializeComponent();
             MessageBox.Show("Aplicacion para introducir una lista que te va preguntando si quieres introducir mas numeros y posteriormente mostrar los numeros primos y los que no son primos");
         }
 
-        private static string InputBox(string texto)
+        /// <summary>
+        /// Metodo del InputBox
+        /// </summary>
+        /// <param name="TextoIntroducido">Texto que se introduce en el InputBox</param>
+        /// <returns></returns>
+        private static string InputBox(string TextoIntroducido)
         {
             InputBoxDialog ib = new InputBoxDialog();
-            ib.FormPrompt = texto;
+            ib.FormPrompt = TextoIntroducido;
             ib.DefaultValue = "";
             ib.ShowDialog();
             string s = ib.InputResponse;
@@ -34,7 +45,11 @@ namespace Aplicacion1
             return s;
         }
 
-
+        /// <summary>
+        /// Metodo para leer un ArrayList
+        /// </summary>
+        /// <param name="ListaParam">Lista que se quiere leer</param>
+        /// <remarks>Al introducir el numero se pregunta con un MessageBox si se quiere continuar</remarks>
         void LeerArray(ArrayList ListaParam)
         {
             DialogResult QuiereContinuar = DialogResult.Yes;
@@ -47,7 +62,12 @@ namespace Aplicacion1
 
 
         }
-
+        /// <summary>
+        /// Metodo para mostrar un ArrayList
+        /// </summary>
+        /// <param name="ListaParam">Lista que se quiere mostrar</param>
+        /// <remarks>Un string vacio al que se le van sumando los elementos de la lista</remarks>
+        /// <returns>Un string con todos los elementos de la lista</returns>
         string MostrarArray(ArrayList ListaParam)
         {
             int i;
@@ -63,7 +83,11 @@ namespace Aplicacion1
 
             return TextoMostrar;
         }
-
+        /// <summary>
+        /// Metodo para saber si un numero es primo
+        /// </summary>
+        /// <param name="NumeroPrimo">El numero que se quiere comprobar si es primo</param>
+        /// <returns>Un booleano true si es primo o false si no lo es</returns>
         bool ComprobarPrimos (int NumeroPrimo)
         {
             bool EsPrimo = true;
@@ -85,6 +109,12 @@ namespace Aplicacion1
 
             return EsPrimo;
         }
+        /// <summary>
+        /// Metodo que separa los primos y no primos en dos listas
+        /// </summary>
+        /// <param name="NoPrimos">Lista original de la que se eliminan los primos</param>
+        /// <param name="PrimosLista">Lista a la que se añaden los primos</param>
+        /// <remarks>Se añade a una lista todos los numeros primos y los elimina de la lista original, dejando una lista de primos y una de no primos</remarks>
         void SepararPrimos(ArrayList NoPrimos, ArrayList PrimosLista)
         {
             int i = 0;
@@ -105,16 +135,25 @@ namespace Aplicacion1
                 }
             }
         }
-
+        /// <summary>
+        /// Boton que llama al metodo LeerArray
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
-            LeerArray(ListaPrimos);
+            LeerArray(ListaNoPrimos);
         }
-
+        /// <summary>
+        /// Boton para mostrar por MessageBox las listas
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        /// <remarks>Llama al metodo SepararPrimos y luego declara dos strings llamando al metodo MostrarArray con dos ArrayList</remarks>
         private void button2_Click(object sender, EventArgs e)
         {
             string TextoPrimos, TextoNoPrimos;
-            SepararPrimos(ListaPrimos, ListaNoPrimos);
+            SepararPrimos(ListaNoPrimos, ListaPrimos);
             TextoPrimos = "Los numeros que son primos son: \n" + MostrarArray(ListaPrimos);
             TextoNoPrimos = "Los numeros que no son primos son: \n" + MostrarArray(ListaNoPrimos);
 

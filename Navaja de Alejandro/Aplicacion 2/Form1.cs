@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace Aplicacion2
 {
+    /// <summary>
+    /// Clase formulario
+    /// </summary>
     public partial class Form1 : Form
     {
 
@@ -18,24 +21,34 @@ namespace Aplicacion2
         int[,] PrimeraMatriz = new int[Kfilas, Kcols];
         int[,] SegundaMatriz = new int[Kfilas, Kcols];
         int[,] MatrizSumada = new int[Kfilas, Kcols];
-
+        /// <summary>
+        /// Constructor del formulario
+        /// </summary>
+        /// <remarks>Contiene un MessageBox que explica la funcionalidad del programa</remarks>
         public Form1()
         {
             InitializeComponent();
             MessageBox.Show("Aplicacion para introducir dos matrices iguales que se van tienen que sumar elemento a elemento en una tercera matriz y posteriormente mostrarla matriz sumada");
         }
-
-        private static string InputBox(string texto)
+        /// <summary>
+        /// Metodo del InputBox
+        /// </summary>
+        /// <param name="TextoIntroducido">Texto que se introduce en el InputBox</param>
+        /// <returns></returns>        
+        private static string InputBox(string TextoIntroducido)
         {
             InputBoxDialog ib = new InputBoxDialog();
-            ib.FormPrompt = texto;
+            ib.FormPrompt = TextoIntroducido;
             ib.DefaultValue = "";
             ib.ShowDialog();
             string s = ib.InputResponse;
             ib.Close();
             return s;
         }
-
+        /// <summary>
+        /// Metodo para leer una matriz
+        /// </summary>
+        /// <param name="MatrizParam">Matriz que se quiere leer</param>
         void LeerMatriz(int[,] MatrizParam)
         {
             for (int i = 0; i < MatrizParam.GetLength(0); i++)
@@ -46,7 +59,12 @@ namespace Aplicacion2
                 }
             }
         }
-
+        /// <summary>
+        /// Metodo para sumar dos matrices elemento a elemnto en una tercera matriz
+        /// </summary>
+        /// <param name="MatrizParam1">La primera de las dos matrices a sumar</param>
+        /// <param name="MatrizParam2">La segunda de las dos matrices a sumar</param>
+        /// <param name="MatrizParam3">La matriz sumada</param>
         void SumaMatriz(int[,] MatrizParam1, int[,] MatrizParam2, int[,] MatrizParam3)
         {
             for (int col = 0; col < MatrizParam1.GetLength(1); col++)
@@ -58,10 +76,15 @@ namespace Aplicacion2
                
             }                        
         }
-
+        /// <summary>
+        /// Metodo para mostrar una matriz
+        /// </summary>
+        /// <param name="MatrizParam">Matriz que se quiere mostrar</param>
+        /// <returns>Un string con los elementos de la matriz</returns>
         string MostrarMatriz(int[,] MatrizParam)
         {
-            string MostrarTexto = "Los valores de la matriz son:\n";
+            string MostrarTexto;
+            MostrarTexto = "Los valores de la matriz son:\n";
 
 
             for (int i = 0; i < MatrizParam.GetLength(0); i++)
@@ -76,17 +99,28 @@ namespace Aplicacion2
 
             return MostrarTexto;
         }
-
+        /// <summary>
+        /// Boton que llama al metodo LeerArray dos veces
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        /// <remarks>Se leen dos matrices llamando dos veces seguidas a LeerMatriz</remarks>
         private void button1_Click(object sender, EventArgs e)
         {
             LeerMatriz(PrimeraMatriz);
             LeerMatriz(SegundaMatriz);
         }
-
+        /// <summary>
+        /// Boton para mostrar por MessageBox la matriz sumada
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        /// <remarks>Llama al metodo SumaMatriz y luego declara un string llamando al metodo MostrarMatriz</remarks>
         private void button2_Click(object sender, EventArgs e)
         {
-            SumaMatriz(PrimeraMatriz, SegundaMatriz, MatrizSumada);
-            string MostrarTexto = MostrarMatriz(MatrizSumada);
+            string MostrarTexto;
+            SumaMatriz(PrimeraMatriz, SegundaMatriz, MatrizSumada);            
+            MostrarTexto = MostrarMatriz(MatrizSumada);
 
 
             MessageBox.Show(MostrarTexto);
