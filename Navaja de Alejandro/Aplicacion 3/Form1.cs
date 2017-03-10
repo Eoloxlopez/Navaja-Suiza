@@ -49,11 +49,27 @@ namespace Aplicacion3
         /// <param name="MatrizParam">Matriz que se quiere leer</param>
         void LeerMatriz(int[,] MatrizParam)
         {
+            int Resultado;
+            bool EsNumero;
+            EsNumero = false;
+
+
             for (int i = 0; i < MatrizParam.GetLength(0); i++)
             {
                 for (int j = 0; j < MatrizParam.GetLength(1); j++)
                 {
-                    MatrizParam[i, j] = int.Parse(InputBox("Elemento[" + i + ", " + j + "]"));
+                    do
+                    {
+                        EsNumero = int.TryParse(InputBox("Elemento[" + i + ", " + j + "]"), out Resultado);
+                        if (EsNumero)
+                        {
+                            MatrizParam[i, j] = Resultado;
+                        }
+                        else
+                        {
+                            MessageBox.Show("El caracter introducido no es un numero valido");
+                        }
+                    } while (!EsNumero);
                 }
             }
         }

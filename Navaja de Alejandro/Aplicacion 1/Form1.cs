@@ -26,7 +26,7 @@ namespace Aplicacion1
         public Form1()
         {
             InitializeComponent();
-            MessageBox.Show("Aplicacion para introducir una lista que te va preguntando si quieres introducir mas numeros y posteriormente mostrar los numeros primos y los que no son primos");
+            MessageBox.Show("Aplicacion para introducir una lista que te va preguntando si quieres continuar introduciendo mas numeros y posteriormente muestra los numeros primos y los que no son primos");
         }
 
         /// <summary>
@@ -52,12 +52,26 @@ namespace Aplicacion1
         /// <remarks>Al introducir el numero se pregunta con un MessageBox si se quiere continuar</remarks>
         void LeerArray(ArrayList ListaParam)
         {
+            int Resultado;
+            bool EsNumero;
+            EsNumero = false;            
             DialogResult QuiereContinuar = DialogResult.Yes;
+
 
             while (QuiereContinuar == DialogResult.Yes)
             {
-                ListaParam.Add(int.Parse(InputBox("Introduzca el número ")));
-                QuiereContinuar = MessageBox.Show("¿Quiere introducir otro numero?", "¿Continuar?", MessageBoxButtons.YesNo);
+                EsNumero = int.TryParse(InputBox("Introduzca el número "), out Resultado);
+
+
+                if (EsNumero)
+                {
+                    ListaParam.Add(Resultado);
+                    QuiereContinuar = MessageBox.Show("¿Quiere introducir otro numero?", "¿Continuar?", MessageBoxButtons.YesNo); 
+                }
+                else
+                {
+                    MessageBox.Show("El caracter introducido no es un numero valido");
+                }
             }
 
 

@@ -50,7 +50,7 @@ namespace Aplicacion4
         {
             for (int i = 0; i < VectorParam.Length; i++)
             {
-                VectorParam[i] = int.Parse(InputBox("Introduzca una temperatura en el espacio " + i));
+                VectorParam[i] = int.Parse(InputBox("Introduzca una numero en el espacio " + i));
             }
         }
 
@@ -96,19 +96,30 @@ namespace Aplicacion4
         /// <remarks>Se declara un int con el numero introducido por TextBox y luego un booleano llamando al metodo EstaVector y discriminando si es true o false con un if muestra un MessageBox con el resultado</remarks>
         private void button2_Click(object sender, EventArgs e)
         {
-            int NumIntroducido;            
-            bool NumeroEsta;
-            NumIntroducido = int.Parse(textBox1.Text);
-            NumeroEsta = EstaVector(Vector1, NumIntroducido);
-
-            if (NumeroEsta)
+            int Resultado;
+            bool NumeroEsta, EsNumero;
+            EsNumero = false;
+            EsNumero = int.TryParse(textBox1.Text, out Resultado);
+                                    
+            if (EsNumero)
             {
-                MessageBox.Show("El numero introduzido estaba en el vector"); 
+                NumeroEsta = EstaVector(Vector1, Resultado);
+
+
+                if (NumeroEsta)
+                {
+                    MessageBox.Show("El numero introducido estaba en el vector");
+                }
+                else
+                {
+                    MessageBox.Show("El numero introducido no estaba en el vector");
+                }
             }
             else
             {
-                MessageBox.Show("El numero introduzido no estaba en el vector");
+                MessageBox.Show("El caracter introducido no es un numero valido");
             }
+            
         }
     }
 }
