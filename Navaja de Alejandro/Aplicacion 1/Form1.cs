@@ -61,8 +61,6 @@ namespace Aplicacion1
             while (QuiereContinuar == DialogResult.Yes)
             {
                 EsNumero = int.TryParse(InputBox("Introduzca el número "), out Resultado);
-
-
                 if (EsNumero)
                 {
                     ListaParam.Add(Resultado);

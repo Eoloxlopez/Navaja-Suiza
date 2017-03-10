@@ -48,10 +48,28 @@ namespace Aplicacion4
         /// <param name="VectorParam">Vector que se quiere leer</param>
         void LeerVector(int[] VectorParam)
         {
+
+            int Resultado;
+            bool EsNumero;
+            EsNumero = false;
+
+
             for (int i = 0; i < VectorParam.Length; i++)
             {
-                VectorParam[i] = int.Parse(InputBox("Introduzca una numero en el espacio " + i));
+                do
+                {
+                    EsNumero = int.TryParse(InputBox("Introduzca una numero en el espacio " + i), out Resultado);
+                    if (EsNumero)
+                    {
+                        VectorParam[i] = Resultado;
+                    }
+                    else
+                    {
+                        MessageBox.Show("El caracter introducido no es un numero valido");
+                    } 
+                } while (!EsNumero);
             }
+
         }
 
         /// <summary>
@@ -100,7 +118,7 @@ namespace Aplicacion4
             bool NumeroEsta, EsNumero;
             EsNumero = false;
             EsNumero = int.TryParse(textBox1.Text, out Resultado);
-                                    
+
             if (EsNumero)
             {
                 NumeroEsta = EstaVector(Vector1, Resultado);
@@ -119,7 +137,7 @@ namespace Aplicacion4
             {
                 MessageBox.Show("El caracter introducido no es un numero valido");
             }
-            
+
         }
     }
 }
