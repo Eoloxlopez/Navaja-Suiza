@@ -9,8 +9,8 @@ using System.Text;
 namespace System
 {
     /// <summary>
-    /// Summary description for InputBox.
-    ///
+    /// Summary descripcion del InputBox.
+    /// </summary>
     public class InputBoxDialog : System.Windows.Forms.Form
     {
 
@@ -23,7 +23,9 @@ namespace System
         /// Required designer variable.
         ///
         private System.ComponentModel.Container components = null;
-
+        /// <summary>
+        /// Inpirt 
+        /// </summary>
         public InputBoxDialog()
         {
             //
@@ -178,13 +180,22 @@ namespace System
         #endregion
 
 
-
+        /// <summary>
+        /// Summary del boton OK del InputBox
+        /// </summary>
+        /// <param name="sender">Parametro del boton OK del InputBox</param>
+        /// <param name="e">Parametro del boton del OK InputBox</param>
         void BtnOKClick(object sender, EventArgs e)
-        {
+        {            
             InputResponse = this.txtInput.Text;
             this.Close();
         }
 
+        /// <summary>
+        /// Summary del boton Cancel del InputBox
+        /// </summary>
+        /// <param name="sender">Parametro del boton Cancel del InputBox</param>
+        /// <param name="e">Parametro del boton Cancel del InputBox</param>
         void BtnCancelClick(object sender, EventArgs e)
         {
             this.Close();

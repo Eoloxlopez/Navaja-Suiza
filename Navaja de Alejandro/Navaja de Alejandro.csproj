@@ -47,55 +47,59 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Aplicacion 1\Form1.cs">
+    <Compile Include="Aplicacion 1\FormAplicacion1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Aplicacion 1\Form1.designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Aplicacion 1\FormAplicacion1.Designer.cs">
+      <DependentUpon>FormAplicacion1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Aplicacion 2\Form1.cs">
+    <Compile Include="Aplicacion 1\Logica Aplicacion 1.cs" />
+    <Compile Include="Aplicacion 2\FormAplicacion2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Aplicacion 2\Form1.designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Aplicacion 2\FormAplicacion2.Designer.cs">
+      <DependentUpon>FormAplicacion2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Aplicacion 3\Form1.cs">
+    <Compile Include="Aplicacion 2\Logica Aplicacion 2.cs" />
+    <Compile Include="Aplicacion 3\FormAplicacion3.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Aplicacion 3\Form1.designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Aplicacion 3\FormAplicacion3.Designer.cs">
+      <DependentUpon>FormAplicacion3.cs</DependentUpon>
     </Compile>
-    <Compile Include="Aplicacion 4\Form1.cs">
+    <Compile Include="Aplicacion 3\Logica Aplicacion 3.cs" />
+    <Compile Include="Aplicacion 4\FormAplicacion4.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Aplicacion 4\Form1.designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Aplicacion 4\FormAplicacion4.Designer.cs">
+      <DependentUpon>FormAplicacion4.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Aplicacion 4\Logica Aplicacion 4.cs" />
+    <Compile Include="FormPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FormPrincipal.Designer.cs">
+      <DependentUpon>FormPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="InputBox.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Aplicacion 1\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Aplicacion 1\FormAplicacion1.resx">
+      <DependentUpon>FormAplicacion1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Aplicacion 2\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Aplicacion 2\FormAplicacion2.resx">
+      <DependentUpon>FormAplicacion2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Aplicacion 3\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Aplicacion 3\FormAplicacion3.resx">
+      <DependentUpon>FormAplicacion3.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Aplicacion 4\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Aplicacion 4\FormAplicacion4.resx">
+      <DependentUpon>FormAplicacion4.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="FormPrincipal.resx">
+      <DependentUpon>FormPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -106,6 +110,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Archivo de Estilos y Pruebas.docx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
