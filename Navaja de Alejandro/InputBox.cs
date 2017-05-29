@@ -15,13 +15,21 @@ namespace System
     {
 
         #region Windows Contols and Constructor
-
+        /// <summary>
+        /// Label del inputbox
+        /// </summary>
         private System.Windows.Forms.Label lblPrompt;
+        /// <summary>
+        /// boton de inputbox
+        /// </summary>
         private System.Windows.Forms.Button btnOK;
+        /// <summary>
+        /// textbox del inputbox
+        /// </summary>
         private System.Windows.Forms.TextBox txtInput;
         /// <summary>
         /// Required designer variable.
-        ///
+        /// </summary>
         private System.ComponentModel.Container components = null;
         /// <summary>
         /// Inpirt 

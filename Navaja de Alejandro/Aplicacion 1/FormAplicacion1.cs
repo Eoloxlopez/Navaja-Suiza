@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace Navaja_de_Alejandro.Aplicacion_1
 {
+    /// <summary>
+    ///  Clase Formulario Form 1
+    /// </summary>
     public partial class FormAplicacion1 : Form
     {
         /// <summary>

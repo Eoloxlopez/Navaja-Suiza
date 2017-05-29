@@ -10,7 +10,7 @@ namespace Navaja_de_Alejandro.Aplicacion_1
     /// <summary>
     /// Clase Logica de la aplicacion 1
     /// </summary>
-    class Logica_Aplicacion_1
+    public class Logica_Aplicacion_1
     {
         /// <summary>
         /// ArrayList que contine los numeros primos despues de separalos de ListaNoPrimos

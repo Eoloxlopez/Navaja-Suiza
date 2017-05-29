@@ -9,7 +9,7 @@ namespace Navaja_de_Alejandro.Aplicacion_4
     /// <summary>
     /// Clase Logica de la aplicacion 4
     /// </summary>
-    class Logica_Aplicacion_4
+    public class Logica_Aplicacion_4
     {
         /// <summary>
         /// Constante que le da tamaño al vector

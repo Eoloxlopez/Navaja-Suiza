@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Navaja de Alejandro", "Nava
 EndProject
 Project("{7CF6DF6D-3B04-46F8-A40B-537D21BCA0B4}") = "Documentacion", "Documentacion\Documentacion.shfbproj", "{96F52C76-1D8F-4472-A317-C4445440BDA2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pruebas Unitarias", "Pruebas Unitarias\Pruebas Unitarias.csproj", "{4163819C-15B9-4D11-BA4B-F21758DAE05D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{96F52C76-1D8F-4472-A317-C4445440BDA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96F52C76-1D8F-4472-A317-C4445440BDA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{96F52C76-1D8F-4472-A317-C4445440BDA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4163819C-15B9-4D11-BA4B-F21758DAE05D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4163819C-15B9-4D11-BA4B-F21758DAE05D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4163819C-15B9-4D11-BA4B-F21758DAE05D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4163819C-15B9-4D11-BA4B-F21758DAE05D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

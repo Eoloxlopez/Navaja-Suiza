@@ -9,7 +9,7 @@ namespace Navaja_de_Alejandro.Aplicacion_3
     /// <summary>
     /// Clase Logica de la aplicacion 3
     /// </summary>
-    class Logica_Aplicacion_3
+    public static class Logica_Aplicacion_3
     {
         /// <summary>
         /// Constante que determina el numero de filas de la matriz
@@ -23,13 +23,20 @@ namespace Navaja_de_Alejandro.Aplicacion_3
         /// Matriz de la que sumaremos su diagonal
         /// </summary>
         public static double[,] MatrizDiagonal = new double[Kfilas, Kcols];
+        /// <summary>
+        /// variable que sirve para controlar el numero de filas en la matriz
+        /// </summary>
         public static int FilasLLenas = 0;
+        /// <summary>
+        /// variable que sirve para controlar el numero de columnas en la matriz
+        /// </summary>
         public static int ColumnasLLenas = 0;
 
         /// <summary>
         /// Metodo para leer una matriz
         /// </summary>
         /// <param name="MatrizParam">Matriz que se quiere leer</param>
+        /// <param name="NumAñadido">Numero a añadir</param>
         public static void AñadirNumero(double[,] MatrizParam, double NumAñadido)
         {
             MatrizParam[FilasLLenas, ColumnasLLenas] = NumAñadido;

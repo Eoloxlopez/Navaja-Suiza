@@ -6,6 +6,9 @@ using System.Windows.Forms;
 
 namespace Navaja_de_Alejandro
 {
+    /// <summary>
+    /// Clase Program
+    /// </summary>
     static class Program
     {
         /// <summary>

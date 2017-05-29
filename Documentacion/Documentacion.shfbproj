@@ -45,21 +45,22 @@
     <VisibleItems>Internals, Privates, PrivateFields, Protected, SealedProtected, ProtectedInternalAsProtected, PublicCompilerGenerated</VisibleItems>
     <NamespaceSummaries>
       <NamespaceSummaryItem name="Navaja_de_Alejandro" isDocumented="True">Namespace de la Aplicacion Principal</NamespaceSummaryItem>
-<NamespaceSummaryItem name="System" isDocumented="False" />
-<NamespaceSummaryItem name="(global)" isDocumented="False" />
-<NamespaceSummaryItem name="Aplicacion1" isDocumented="False">Namespace de la Aplicacion 1</NamespaceSummaryItem>
-<NamespaceSummaryItem name="Aplicacion2" isDocumented="False">Namespace de la Aplicacion 2</NamespaceSummaryItem>
-<NamespaceSummaryItem name="Aplicacion3" isDocumented="False">Namespace de la Aplicacion 3</NamespaceSummaryItem>
-<NamespaceSummaryItem name="Aplicacion4" isDocumented="False">Namespace de la Aplicacion 4</NamespaceSummaryItem>
-<NamespaceSummaryItem name="Navaja_de_Alejandro_App1" isDocumented="False">Namespace de la Aplicacion 1</NamespaceSummaryItem>
-<NamespaceSummaryItem name="Navaja_de_Alejandro_App2" isDocumented="False">Namespace de la Aplicacion 2</NamespaceSummaryItem>
-<NamespaceSummaryItem name="Navaja_de_Alejandro_App3" isDocumented="False">Namespace de la Aplicacion 3</NamespaceSummaryItem>
-<NamespaceSummaryItem name="Navaja_de_Alejandro_App4" isDocumented="False">Namespace de la Aplicacion 4</NamespaceSummaryItem>
-<NamespaceSummaryItem name="Navaja_de_Alejandro.Aplicacion_1" isDocumented="True">Namespace de la Aplicacion 1</NamespaceSummaryItem>
-<NamespaceSummaryItem name="Navaja_de_Alejandro.Aplicacion_2" isDocumented="True">Namespace de la Aplicacion 2</NamespaceSummaryItem>
-<NamespaceSummaryItem name="Navaja_de_Alejandro.Aplicacion_3" isDocumented="True">Namespace de la Aplicacion 3</NamespaceSummaryItem>
-<NamespaceSummaryItem name="Navaja_de_Alejandro.Aplicacion_4" isDocumented="True">Namespace de la Aplicacion 4</NamespaceSummaryItem></NamespaceSummaries>
-    <MissingTags>Summary, Parameter, Returns, Remarks, AutoDocumentCtors, Namespace, TypeParameter, AutoDocumentDispose</MissingTags>
+      <NamespaceSummaryItem name="System" isDocumented="False" />
+      <NamespaceSummaryItem name="(global)" isDocumented="False" />
+      <NamespaceSummaryItem name="Aplicacion1" isDocumented="False">Namespace de la Aplicacion 1</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Aplicacion2" isDocumented="False">Namespace de la Aplicacion 2</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Aplicacion3" isDocumented="False">Namespace de la Aplicacion 3</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Aplicacion4" isDocumented="False">Namespace de la Aplicacion 4</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Navaja_de_Alejandro_App1" isDocumented="False">Namespace de la Aplicacion 1</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Navaja_de_Alejandro_App2" isDocumented="False">Namespace de la Aplicacion 2</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Navaja_de_Alejandro_App3" isDocumented="False">Namespace de la Aplicacion 3</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Navaja_de_Alejandro_App4" isDocumented="False">Namespace de la Aplicacion 4</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Navaja_de_Alejandro.Aplicacion_1" isDocumented="True">Namespace de la Aplicacion 1</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Navaja_de_Alejandro.Aplicacion_2" isDocumented="True">Namespace de la Aplicacion 2</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Navaja_de_Alejandro.Aplicacion_3" isDocumented="True">Namespace de la Aplicacion 3</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Navaja_de_Alejandro.Aplicacion_4" isDocumented="True">Namespace de la Aplicacion 4</NamespaceSummaryItem>
+    </NamespaceSummaries>
+    <MissingTags>Summary, Parameter, Returns, AutoDocumentCtors, Namespace, TypeParameter, AutoDocumentDispose</MissingTags>
   </PropertyGroup>
   <!-- There are no properties for these groups.  AnyCPU needs to appear in order for Visual Studio to perform
 			 the build.  The others are optional common platform types that may appear. -->

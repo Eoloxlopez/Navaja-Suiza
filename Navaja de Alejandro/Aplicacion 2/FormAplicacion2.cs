@@ -11,7 +11,7 @@ using Navaja_de_Alejandro.Aplicacion_2;
 namespace Navaja_de_Alejandro.Aplicacion_2
 {
     /// <summary>
-    /// Clase formulario
+    ///  Clase Formulario Form 2
     /// </summary>
     public partial class FormAplicacion2 : Form
     {
@@ -64,20 +64,6 @@ namespace Navaja_de_Alejandro.Aplicacion_2
         /// <remarks>Comprueba con Double.TryParse si es un caracter valido. En caso de ser valido llama a AñadirNumero sino muestra un mensaje de error</remarks>        
         private void BotonAñadirMatriz2_Click(object sender, EventArgs e)
         {
-            string MostrarTexto;
-            Logica_Aplicacion_2.SumaMatriz(Logica_Aplicacion_2.PrimeraMatriz, Logica_Aplicacion_2.SegundaMatriz, Logica_Aplicacion_2.MatrizSumada);
-            MostrarTexto = Logica_Aplicacion_2.MostrarMatriz(Logica_Aplicacion_2.MatrizSumada);
-
-            MessageBox.Show(MostrarTexto);
-        }
-        /// <summary>
-        /// Boton para mostrar por MessageBox la matriz sumada
-        /// </summary>
-        /// <param name="sender">Parametro del Boton Sumar matrices</param>
-        /// <param name="e">Parametro del Boton Sumar matrices</param>
-        /// <remarks>Llama al metodo SumaMatriz y luego declara un string llamando al metodo MostrarMatriz</remarks>
-        private void BotonSumMatriz_Click(object sender, EventArgs e)
-        {
             if (Logica_Aplicacion_2.FilasLLenas2 == 3)
             {
                 BotonAñadirMatriz2.Enabled = false;
@@ -99,6 +85,20 @@ namespace Navaja_de_Alejandro.Aplicacion_2
             }
 
             TextBoxAñadirMatriz2.Clear();
+        }
+        /// <summary>
+        /// Boton para mostrar por MessageBox la matriz sumada
+        /// </summary>
+        /// <param name="sender">Parametro del Boton Sumar matrices</param>
+        /// <param name="e">Parametro del Boton Sumar matrices</param>
+        /// <remarks>Llama al metodo SumaMatriz y luego declara un string llamando al metodo MostrarMatriz</remarks>
+        private void BotonSumMatriz_Click(object sender, EventArgs e)
+        {
+            string MostrarTexto;
+            Logica_Aplicacion_2.SumaMatriz(Logica_Aplicacion_2.PrimeraMatriz, Logica_Aplicacion_2.SegundaMatriz, Logica_Aplicacion_2.MatrizSumada);
+            MostrarTexto = Logica_Aplicacion_2.MostrarMatriz(Logica_Aplicacion_2.MatrizSumada);
+
+            MessageBox.Show(MostrarTexto);            
         }
 
         private void TextBoxAñadirMatriz1_TextChanged(object sender, EventArgs e)

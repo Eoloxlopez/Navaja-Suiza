@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace Navaja_de_Alejandro.Aplicacion_4
 {
     /// <summary>
-    /// Clase formulario
+    ///  Clase Formulario Form 4
     /// </summary>
     public partial class FormAplicacion4 : Form
     {

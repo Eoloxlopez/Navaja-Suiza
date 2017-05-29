@@ -120,6 +120,13 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Pruebas\Archivo de Pruebas.docx" />
+    <None Include="Pruebas\Caja blanca Aplicacion 1.xls" />
+    <None Include="Pruebas\Caja blanca Aplicacion 4.xls" />
+    <None Include="Pruebas\Caja Negra Aplicacion 1.xls" />
+    <None Include="Pruebas\Caja Negra Aplicacion 2.xls" />
+    <None Include="Pruebas\Caja Negra Aplicacion 3.xls" />
+    <None Include="Pruebas\Caja Negra Aplicacion 4.xls" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

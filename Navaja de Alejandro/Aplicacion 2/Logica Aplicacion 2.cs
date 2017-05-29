@@ -9,7 +9,7 @@ namespace Navaja_de_Alejandro.Aplicacion_2
     /// <summary>
     /// Clase Logica de la aplicacion 2
     /// </summary>
-    static class Logica_Aplicacion_2
+    public static class Logica_Aplicacion_2
     {
         /// <summary>
         /// Constante que determina el numero de filas de la matriz
@@ -31,9 +31,21 @@ namespace Navaja_de_Alejandro.Aplicacion_2
         /// Matriz donde sumaremos las matrices 1 y 2
         /// </summary>
         public static double[,] MatrizSumada = new double[Kfilas, Kcols];
+        /// <summary>
+        /// variable que sirve para controlar el numero de filas en la matriz 1
+        /// </summary>
         public static int FilasLLenas = 0;
+        /// <summary>
+        /// variable que sirve para controlar el numero de columnas en la matriz 1
+        /// </summary>
         public static int ColumnasLLenas = 0;
+        /// <summary>
+        /// ariable que sirve para controlar el numero de filas en la matriz 2
+        /// </summary>
         public static int FilasLLenas2 = 0;
+        /// <summary>
+        /// variable que sirve para controlar el numero de columnas en la matriz 2
+        /// </summary>
         public static int ColumnasLLenas2 = 0;
 
         /// <summary>
